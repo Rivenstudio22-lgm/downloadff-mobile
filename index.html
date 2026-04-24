@@ -9,52 +9,62 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0a0a0a;
+  background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b1') no-repeat center/cover;
   color: white;
+}
+
+/* OVERLAY ESCURO */
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: -1;
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: black;
-  border-bottom: 2px solid purple;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.8);
 }
 
 .logo {
+  font-size: 24px;
   color: orange;
-  font-size: 22px;
   font-weight: bold;
 }
 
 .menu a {
-  color: white;
   margin: 0 10px;
   text-decoration: none;
+  color: white;
 }
 
 .login {
   border: 1px solid purple;
   padding: 8px 15px;
   border-radius: 8px;
+  box-shadow: 0 0 10px purple;
 }
 
 /* HERO */
 .hero {
-  padding: 60px;
-  background: linear-gradient(black, #1a001a);
+  padding: 80px 40px;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .hero span {
   color: purple;
+  text-shadow: 0 0 10px purple;
 }
 
-/* BOTÕES */
+/* DOWNLOAD BOX */
 .download {
   display: flex;
   gap: 20px;
@@ -66,25 +76,13 @@ nav {
   padding: 30px;
   border-radius: 15px;
   text-align: center;
+  background: rgba(0,0,0,0.6);
 }
 
+/* ANDROID */
 .android {
   border: 2px solid #00ff88;
   box-shadow: 0 0 20px #00ff88;
-}
-
-.ios {
-  border: 2px solid purple;
-  box-shadow: 0 0 20px purple;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
 }
 
 .android .btn {
@@ -92,24 +90,39 @@ nav {
   color: black;
 }
 
+/* IOS */
+.ios {
+  border: 2px solid purple;
+  box-shadow: 0 0 20px purple;
+}
+
 .ios .btn {
   background: purple;
 }
 
+/* BOTÃO */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
 /* FOOTER */
 footer {
-  margin-top: 50px;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
   border-top: 1px solid #333;
-  font-size: 14px;
+  margin-top: 50px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
 <nav>
   <div class="logo">DownloadFF Mobile</div>
 
@@ -123,15 +136,13 @@ footer {
   <div class="login">Entrar</div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <h1>BAIXE AGORA <br><span>FREE FIRE</span></h1>
 
-  <p>O melhor battle royale para mobile. Jogue agora!</p>
+  <p>O melhor battle royale para mobile. Ação intensa, partidas rápidas e muita adrenalina!</p>
 
   <div class="download">
-    
-    <!-- ANDROID -->
+
     <div class="box android">
       <h2>📱 Android</h2>
       <p>Baixar para Android</p>
@@ -140,7 +151,6 @@ footer {
       </a>
     </div>
 
-    <!-- IOS -->
     <div class="box ios">
       <h2>🍎 iOS</h2>
       <p>Baixar para iPhone</p>
@@ -152,7 +162,6 @@ footer {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 DownloadFF Mobile. Todos os direitos reservados.
 </footer>
