@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DownloadFF Mobile</title>
+<title>Dragon Gamer Hub</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
 body{
   font-family:'Orbitron',sans-serif;
   background:#0a0a0a;
-  color:#fff;
+  color:white;
 }
 
 /* LOADER */
@@ -40,198 +41,156 @@ body{
 nav{
   display:flex;
   justify-content:space-between;
-  padding:20px 40px;
-  border-bottom:1px solid #ff00ff;
-}
-nav a{
-  color:#fff;
-  margin-left:20px;
-  text-decoration:none;
+  padding:20px;
+  border-bottom:1px solid #ff00ff33;
 }
 
 /* HERO */
 .hero{
-  height:100vh;
-  background:url('https://images.unsplash.com/photo-1511512578047-dfb367046420') no-repeat center/cover;
-  position:relative;
+  height:70vh;
   display:flex;
+  flex-direction:column;
+  justify-content:center;
   align-items:center;
-  padding:60px;
-}
-.hero::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:linear-gradient(to right,rgba(0,0,0,.9),rgba(0,0,0,.3));
-}
-.hero-content{
-  position:relative;
-  z-index:1;
-  max-width:600px;
+  text-align:center;
 }
 
-h1{
-  font-size:55px;
+.hero h1{
+  font-size:50px;
 }
+
 .highlight{
   color:#ff00ff;
-  text-shadow:0 0 20px #ff00ff;
 }
 
-p{
-  margin-top:10px;
-  opacity:.8;
+/* BOTÕES */
+.btn{
+  margin-top:15px;
+  padding:12px 25px;
+  background:#ff00ff;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  cursor:pointer;
 }
 
-/* DOWNLOAD BOX */
-.download-box{
-  display:flex;
+/* JOGOS */
+.games{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
-  margin-top:40px;
+  padding:20px;
 }
 
-.box{
-  flex:1;
-  padding:25px;
-  border-radius:15px;
+.card{
+  background:#111;
+  padding:20px;
+  border-radius:10px;
   text-align:center;
   transition:.3s;
 }
 
-.android{
-  border:2px solid #00ff88;
-  box-shadow:0 0 20px #00ff88;
-}
-
-.ios{
-  border:2px solid #ff00ff;
+.card:hover{
+  transform:scale(1.05);
   box-shadow:0 0 20px #ff00ff;
 }
 
-.box:hover{
-  transform:scale(1.05);
+/* DOWNLOAD AREA */
+.download-area{
+  text-align:center;
+  padding:40px;
+  display:none;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:12px 20px;
-  border-radius:8px;
-  font-weight:bold;
-  text-decoration:none;
-  color:#000;
-}
-
-.android .btn{
-  background:#00ff88;
-}
-
-.ios .btn{
-  background:#ff00ff;
-  color:#fff;
-}
-
-/* FEATURES */
-.features{
-  position:absolute;
-  right:40px;
-  bottom:60px;
-  z-index:1;
-}
-.features div{
-  margin:10px 0;
-  padding:10px;
-  border-left:3px solid #ff00ff;
-}
-
-/* STATS */
-.stats{
-  display:flex;
-  justify-content:space-around;
+/* MINI GAME */
+.game-box{
+  text-align:center;
   padding:30px;
-  border-top:1px solid #ff00ff;
+  border-top:1px solid #ff00ff33;
 }
 
 /* ADS */
 .ads{
-  margin:30px;
   text-align:center;
+  margin:20px;
+  padding:20px;
+  border:1px solid purple;
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOADER -->
 <div id="loader"><h1>CARREGANDO...</h1></div>
 
+<!-- NAV -->
 <nav>
-  <div><b>DownloadFF</b></div>
-  <div>
-    <a href="#">Início</a>
-    <a href="#">Recursos</a>
-    <a href="#">Contato</a>
-  </div>
+  <b>Dragon Gamer</b>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>BAIXE AGORA <br><span class="highlight">FREE FIRE</span></h1>
-    <p>O melhor battle royale mobile com ação intensa</p>
-
-    <div class="download-box">
-      <div class="box android">
-        <h3>ANDROID</h3>
-        <p>Download APK</p>
-        <a id="btnDownload" class="btn">DOWNLOAD</a>
-      </div>
-
-      <div class="box ios">
-        <h3>iOS</h3>
-        <p>App Store</p>
-        <a href="#" class="btn">APP STORE</a>
-      </div>
-    </div>
-
-    <br>
-    <button onclick="liberar()" class="btn ios">LIBERAR DOWNLOAD</button>
-  </div>
-
-  <div class="features">
-    <div>🎯 Battle Royale</div>
-    <div>⚡ Partidas rápidas</div>
-    <div>👥 Jogue com amigos</div>
-    <div>🎁 Eventos diários</div>
-  </div>
+  <h1>PLATAFORMA <span class="highlight">GAMER</span></h1>
+  <p>Baixe e explore jogos mobile</p>
 </section>
 
-<section class="stats">
-  <div><h2>+100M</h2><p>Downloads</p></div>
-  <div><h2>+80M</h2><p>Jogadores</p></div>
-  <div><h2>4.4 ⭐</h2><p>Avaliação</p></div>
+<!-- JOGOS -->
+<section class="games">
+
+<div class="card">
+  <h3>Free Fire</h3>
+  <p>Battle Royale</p>
+  <button onclick="abrirDownload()" class="btn">DOWNLOAD</button>
+</div>
+
+<div class="card">
+  <h3>PUBG</h3>
+  <p>Sobrevivência</p>
+  <button onclick="abrirDownload()" class="btn">DOWNLOAD</button>
+</div>
+
 </section>
 
-<!-- ANÚNCIO REAL -->
+<!-- AREA DOWNLOAD -->
+<div id="downloadArea" class="download-area">
+  <h2>🎯 Desbloqueie o Download</h2>
+  <p>Jogue para liberar</p>
+
+  <button onclick="ganhar()" class="btn">CLIQUE</button>
+  <h3>Pontos: <span id="pontos">0</span></h3>
+</div>
+
+<!-- ADS -->
 <div class="ads">
-  <!-- SUBSTITUI PELO TEU CÓDIGO DO ADSENSE -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-XXXXXXXXXXXX"
-       data-ad-slot="1234567890"
-       data-ad-format="auto"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <p>ANÚNCIO AQUI</p>
 </div>
 
 <script>
-window.onload = function(){
-  setTimeout(()=>{document.getElementById("loader").style.display="none";},1500);
+// LOADER
+window.onload = ()=>{
+  setTimeout(()=>{
+    document.getElementById("loader").style.display="none";
+  },1500);
 }
 
-function liberar(){
-  let btn = document.getElementById("btnDownload");
-  btn.href = "SEU_LINK_MONETIZADO_AQUI";
-  btn.click();
+// ABRIR DOWNLOAD
+function abrirDownload(){
+  document.getElementById("downloadArea").style.display="block";
+  window.scrollTo(0, document.body.scrollHeight);
+}
+
+// MINI GAME
+let pontos = 0;
+
+function ganhar(){
+  pontos++;
+  document.getElementById("pontos").innerText = pontos;
+
+  if(pontos >= 5){
+    alert("Download liberado!");
+    window.location.href = "SEU_LINK_MONETIZADO";
+  }
 }
 </script>
 
