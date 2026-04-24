@@ -5,54 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DownloadFF Mobile</title>
 
-<style>
-body <img src="ChatGPT Image Apr 24, 2026, 05_59_08 AM.png" class="logo">
+<style>body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b1') no-repeat center/cover;
+  background: linear-gradient(180deg, #0a0a0a, #000000);
   color: white;
-}
-
-/* OVERLAY ESCURO */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  z-index: -1;
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px 50px;
   background: rgba(0,0,0,0.8);
+  border-bottom: 2px solid #8a2be2;
 }
 
 .logo {
+  color: #ffcc00;
   font-size: 24px;
-  color: orange;
   font-weight: bold;
 }
 
 .menu a {
-  margin: 0 10px;
-  text-decoration: none;
   color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
+.menu a:hover {
+  color: #ffcc00;
+}
+
+/* BOTÃO ENTRAR */
 .login {
-  border: 1px solid purple;
-  padding: 8px 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px purple;
+  border: 2px solid #8a2be2;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #8a2be2;
+  box-shadow: 0 0 10px #8a2be2;
 }
 
 /* HERO */
 .hero {
-  padding: 80px 40px;
+  padding: 80px 50px;
+  background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b1') no-repeat center/cover;
 }
 
 .hero h1 {
@@ -60,111 +58,67 @@ nav {
 }
 
 .hero span {
-  color: purple;
-  text-shadow: 0 0 10px purple;
+  color: #8a2be2;
+  text-shadow: 0 0 15px #8a2be2;
 }
 
 /* DOWNLOAD BOX */
 .download {
   display: flex;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 30px;
+  margin-top: 50px;
 }
 
-.box {
+/* ANDROID BOX */
+.box.android {
   flex: 1;
+  background: rgba(0,0,0,0.8);
   padding: 30px;
   border-radius: 15px;
-  text-align: center;
-  background: rgba(0,0,0,0.6);
-}
-
-/* ANDROID */
-.android {
   border: 2px solid #00ff88;
   box-shadow: 0 0 20px #00ff88;
+  text-align: center;
+}
+
+/* IOS BOX */
+.box.ios {
+  flex: 1;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 20px #ff00ff;
+  text-align: center;
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .android .btn {
   background: #00ff88;
   color: black;
-}
-
-/* IOS */
-.ios {
-  border: 2px solid purple;
-  box-shadow: 0 0 20px purple;
+  box-shadow: 0 0 10px #00ff88;
 }
 
 .ios .btn {
-  background: purple;
-}
-
-/* BOTÃO */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
+  background: #ff00ff;
   color: white;
-  font-weight: bold;
+  box-shadow: 0 0 10px #ff00ff;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  border-top: 1px solid #333;
+  border-top: 1px solid #444;
   margin-top: 50px;
 }
-</style>
-</head>
 
-<body>
-
-<nav>
-  <div class="logo">DownloadFF Mobile</div>
-
-  <div class="menu">
-    <a href="#">Início</a>
-    <a href="#">Sobre</a>
-    <a href="#">Recursos</a>
-    <a href="#">Contato</a>
-  </div>
-
-  <div class="login">Entrar</div>
-</nav>
-
-<section class="hero">
-  <h1>BAIXE AGORA <br><span>FREE FIRE</span></h1>
-
-  <p>O melhor battle royale para mobile. Ação intensa, partidas rápidas e muita adrenalina!</p>
-
-  <div class="download">
-
-    <div class="box android">
-      <h2>📱 Android</h2>
-      <p>Baixar para Android</p>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.dts.freefireth" target="_blank">
-        Baixar Agora
-      </a>
-    </div>
-
-    <div class="box ios">
-      <h2>🍎 iOS</h2>
-      <p>Baixar para iPhone</p>
-      <a class="btn" href="https://apps.apple.com" target="_blank">
-        Baixar Agora
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  © 2026 DownloadFF Mobile. Todos os direitos reservados.
-</footer>
-
-</body>
-</html>
+  
