@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>DownloadFF Mobile</title>
 
-<style>body {
+<!-- Fonte Gamer -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #0a0a0a, #000000);
+  font-family: 'Orbitron', sans-serif;
+  background: black;
   color: white;
 }
 
@@ -17,13 +23,13 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
-  background: rgba(0,0,0,0.8);
-  border-bottom: 2px solid #8a2be2;
+  background: black;
+  border-bottom: 2px solid #ff00ff;
 }
 
 .logo {
   color: #ffcc00;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
 }
 
@@ -31,26 +37,23 @@ nav {
   color: white;
   margin: 0 15px;
   text-decoration: none;
-  transition: 0.3s;
 }
 
 .menu a:hover {
   color: #ffcc00;
 }
 
-/* BOTÃO ENTRAR */
 .login {
-  border: 2px solid #8a2be2;
+  border: 2px solid #ff00ff;
   padding: 8px 20px;
   border-radius: 20px;
-  color: #8a2be2;
-  box-shadow: 0 0 10px #8a2be2;
+  box-shadow: 0 0 10px #ff00ff;
 }
 
-/* HERO */
+/* HERO COM IMAGEM GAMER */
 .hero {
-  padding: 80px 50px;
-  background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b1') no-repeat center/cover;
+  padding: 100px 50px;
+  background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e') no-repeat center/cover;
 }
 
 .hero h1 {
@@ -58,44 +61,47 @@ nav {
 }
 
 .hero span {
-  color: #8a2be2;
-  text-shadow: 0 0 15px #8a2be2;
+  color: #ff00ff;
+  text-shadow: 0 0 20px #ff00ff;
 }
 
-/* DOWNLOAD BOX */
+.hero p {
+  max-width: 600px;
+}
+
+/* DOWNLOAD */
 .download {
   display: flex;
   gap: 30px;
   margin-top: 50px;
 }
 
-/* ANDROID BOX */
-.box.android {
+/* BOXES */
+.box {
   flex: 1;
-  background: rgba(0,0,0,0.8);
-  padding: 30px;
+  padding: 40px;
   border-radius: 15px;
-  border: 2px solid #00ff88;
-  box-shadow: 0 0 20px #00ff88;
   text-align: center;
+  background: rgba(0,0,0,0.7);
 }
 
-/* IOS BOX */
-.box.ios {
-  flex: 1;
-  background: rgba(0,0,0,0.8);
-  padding: 30px;
-  border-radius: 15px;
+/* ANDROID */
+.android {
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 25px #00ff88;
+}
+
+/* IOS */
+.ios {
   border: 2px solid #ff00ff;
-  box-shadow: 0 0 20px #ff00ff;
-  text-align: center;
+  box-shadow: 0 0 25px #ff00ff;
 }
 
 /* BOTÕES */
 .btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
+  margin-top: 20px;
+  padding: 15px 30px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
@@ -104,21 +110,63 @@ nav {
 .android .btn {
   background: #00ff88;
   color: black;
-  box-shadow: 0 0 10px #00ff88;
+  box-shadow: 0 0 15px #00ff88;
 }
 
 .ios .btn {
   background: #ff00ff;
   color: white;
-  box-shadow: 0 0 10px #ff00ff;
+  box-shadow: 0 0 15px #ff00ff;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  border-top: 1px solid #444;
   margin-top: 50px;
+  border-top: 1px solid #444;
 }
 
-  
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">DownloadFF</div>
+  <div class="menu">
+    <a href="#">Início</a>
+    <a href="#">Sobre</a>
+    <a href="#">Recursos</a>
+    <a href="#">Contato</a>
+  </div>
+  <div class="login">Entrar</div>
+</nav>
+
+<section class="hero">
+  <h1>BAIXE AGORA <br><span>FREE FIRE</span></h1>
+  <p>O melhor battle royale para mobile. Ação intensa e muita adrenalina!</p>
+
+  <div class="download">
+
+    <div class="box android">
+      <h2>📱 ANDROID</h2>
+      <p>Baixar APK</p>
+      <a class="btn" href="#">DOWNLOAD APK</a>
+    </div>
+
+    <div class="box ios">
+      <h2>🍎 iOS</h2>
+      <p>Baixar na App Store</p>
+      <a class="btn" href="#">APP STORE</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 DownloadFF Mobile
+</footer>
+
+</body>
+</html>
